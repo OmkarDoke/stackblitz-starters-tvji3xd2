@@ -1,0 +1,23 @@
+<app-card>
+  <!-- <img [src]="selectedUser.avatar" [alt]="selectedUser.id" /> -->
+  <!-- <button (click)="onUserClicked()">
+    <img [src]="imagePath" [alt]="selectedUser.id" />
+    <span>{{selectedUser.name}}</span>
+  </button> -->
+
+  <!-- With Signal Approch -->
+  <!-- <img [src]="selectedUser.avatar" [alt]="selectedUser.id" /> -->
+  <!-- <button (click)="onUserClicked()">
+    <img [src]="imagePath" [alt]="selectedUser().id" />
+    <span>{{selectedUser().name}}</span>
+  </button> -->
+
+  <button [class.active]="Selected" (click)="onUserClicked()">
+    <!-- <img [src]="imagePath" [alt]="User.id" /> -->
+    <img
+      src="https://xsgames.co/randomusers/avatar.php?g=male"
+      [alt]="User.id"
+    />
+    <span>{{User.name}}</span>
+  </button>
+</app-card>

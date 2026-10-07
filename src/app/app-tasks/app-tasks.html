@@ -1,0 +1,21 @@
+<!-- {{console.log(userData)}} -->
+@if (showAddForm){
+<app-add-task [selectedUserId]="userData.id" (closeForm)="onClosedHandeler()" />
+}
+<section id="stasks">
+  <header>
+    <h2>{{userData.name}}'s Tasks</h2>
+    <menu>
+      <button (click)="onAddTaskClicked()">Add Task</button>
+    </menu>
+  </header>
+  <ul>
+    @for (task of getUserTaskList; track task.id; let i = $index){
+
+    <li>
+      <!-- {{i}} -->
+      <app-task [task]="task" />
+    </li>
+    }
+  </ul>
+</section>
