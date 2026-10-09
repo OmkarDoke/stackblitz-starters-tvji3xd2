@@ -1,6 +1,6 @@
 // import { Component, signal } from '@angular/core';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
+// import { bootstrapApplication } from '@angular/platform-browser';
+// import { AppComponent } from './app/app.component';
 
 // @Component({
 //   selector: 'app-root',
@@ -20,6 +20,16 @@ import { AppComponent } from './app/app.component';
 // }
 // bootstrapApplication(App);
 
-bootstrapApplication(AppComponent).catch((error) => {
-  console.log('Error', error);
-});
+
+
+// bootstrapApplication(AppComponent).catch((error) => {
+//   console.log('Error', error);
+// });
+
+
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+
+import {AppModule} from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);
+

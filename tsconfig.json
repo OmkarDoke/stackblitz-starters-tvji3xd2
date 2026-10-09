@@ -1,4 +1,8 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
+// To 
+// Turn off strictStandalone in your configuration
+
+
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -24,6 +28,8 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
-    "strictStandalone": true
+    "strictStandalone": false /// To make it module base updated the flag
   }
 }
+
+

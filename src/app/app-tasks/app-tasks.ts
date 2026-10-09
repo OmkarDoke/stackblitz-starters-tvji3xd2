@@ -4,10 +4,11 @@ import { AddTask } from './add-task/add-task';
 import { TaskService } from './task-service';
 
 @Component({
+  standalone:true,
   selector: 'app-tasks',
-  imports: [Task, AddTask],
   templateUrl: './app-tasks.html',
   styleUrl: './app-tasks.css',
+  imports: [Task, AddTask],
 })
 export class AppTasks {
   @Input({ required: true }) userId!: string;

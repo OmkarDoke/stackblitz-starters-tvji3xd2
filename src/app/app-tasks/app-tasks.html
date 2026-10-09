@@ -4,17 +4,22 @@
 }
 <section id="stasks">
   <header>
-    <h2>{{userData.name}}'s Tasks</h2>
+    <h2>{{userData.name}}'s Tasks </h2>
     <menu>
       <button (click)="onAddTaskClicked()">Add Task</button>
     </menu>
   </header>
   <ul>
-    @for (task of getUserTaskList; track task.id; let i = $index){
+    @for (task of getUserTaskList; track task.id; 
+    let i = $index, 
+    isOdd = $odd,
+    totalCount = $count
+    ){
 
     <li>
-      <!-- {{i}} -->
+      <!-- {{isOdd}} -->
       <app-task [task]="task" />
+      {{i + 1}} of {{totalCount}}
     </li>
     }
   </ul>

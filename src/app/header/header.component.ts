@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  standalone: true,
+  standalone: false,
   templateUrl: './header.component.html',
   // template: '<h1>Hello Angular via template</h1>',
   // styleUrl: './header.component.css', // OR
